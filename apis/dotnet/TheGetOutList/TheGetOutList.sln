@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGetOutList", "TheGetOutList\TheGetOutList.csproj", "{50A5B9C5-2041-466D-9D5C-DA11D507CAD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGetOutList.Data", "TheGetOutList.Data\TheGetOutList.Data.csproj", "{C9F52932-88D9-4E82-BAE6-237E1778A7BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50A5B9C5-2041-466D-9D5C-DA11D507CAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A5B9C5-2041-466D-9D5C-DA11D507CAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A5B9C5-2041-466D-9D5C-DA11D507CAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A5B9C5-2041-466D-9D5C-DA11D507CAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9F52932-88D9-4E82-BAE6-237E1778A7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F52932-88D9-4E82-BAE6-237E1778A7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F52932-88D9-4E82-BAE6-237E1778A7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F52932-88D9-4E82-BAE6-237E1778A7BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
