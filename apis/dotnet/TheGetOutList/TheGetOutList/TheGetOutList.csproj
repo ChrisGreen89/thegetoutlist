@@ -4,10 +4,25 @@
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <EnablePreviewFeatures>True</EnablePreviewFeatures>
+
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\TheGetOutList.Core\TheGetOutList.Core.csproj">
+        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+      </ProjectReference>
+      <ProjectReference Include="..\TheGetOutList.Services\TheGetOutList.Services.csproj">
+        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+      </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
+      <None Remove="TheGetOutList.COre" />
+    </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <EnablePreviewFeatures>True</EnablePreviewFeatures>
     </PropertyGroup>
 
     <ItemGroup>
@@ -11,4 +12,12 @@
       <PackageReference Include="MongoDB.Driver" Version="2.16.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Infrastructure\" />
+      <None Remove="Infrastructure\Attributes\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Infrastructure\" />
+      <Folder Include="Infrastructure\Attributes\" />
+    </ItemGroup>
 </Project>

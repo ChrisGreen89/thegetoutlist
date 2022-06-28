@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+        <EnablePreviewFeatures>True</EnablePreviewFeatures>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TheGetOutList.Data\TheGetOutList.Data.csproj" />
+    <ProjectReference Include="..\TheGetOutList.Core\TheGetOutList.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Microsoft.Extensions.Configuration" />
+    <None Remove="Auth0.ManagementApi" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="Auth0.ManagementApi" Version="7.16.0" />
+  </ItemGroup>
+</Project>

@@ -1,7 +1,10 @@
+using TheGetOutList.Data.Infrastructure.Attributes;
+
 namespace TheGetOutList.Data.Models
 {
-    public class Task
+    [BsonCollectionAttribute("tasks")]
+    public class Task : Document
     {
-        
+        public Guid UserId { get; set; }
     }
 }
