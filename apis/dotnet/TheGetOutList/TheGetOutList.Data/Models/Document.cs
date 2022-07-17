@@ -6,7 +6,7 @@ namespace TheGetOutList.Data.Models
 {
     public interface IDocument
     {
-        public ObjectId? Id { get; set; }
+        public ObjectId Id { get; set; }
 
         public DateTime CreatedAt { get; }
 
@@ -14,7 +14,10 @@ namespace TheGetOutList.Data.Models
 
     public abstract class Document : IDocument
     {
-        public ObjectId? Id { get; set; }
+        [BsonId]
+        [BsonIgnoreIfDefault]
+        [BsonIgnoreIfNull]
+        public ObjectId Id { get; set; }
 
         public DateTime CreatedAt { get; }
     }

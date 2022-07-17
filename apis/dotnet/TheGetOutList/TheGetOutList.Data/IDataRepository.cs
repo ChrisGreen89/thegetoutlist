@@ -84,20 +84,28 @@ namespace TheGetOutList.Data
         /// <returns></returns>
         public async Task<T> UpsertItem<T>(T item) where T : Document
         {
-            var filter = new FilterDefinitionBuilder<T>().Where(x => x.Id == item.Id);
-
-            var updateoptions = new ReplaceOptions()
+            if (item.Id == ObjectId.Empty)
             {
-                IsUpsert = true
-            };
+                // This is an insert
+                var collection = GetCollection<T>(item.GetType());
+                await collection.InsertOneAsync(item);
 
-            var collection = GetCollection<T>(item.GetType());
-
-            var itemUpdate = await collection.ReplaceOneAsync(filter, item, updateoptions);
-
-            if (itemUpdate.UpsertedId.IsObjectId)
+            }
+            else
             {
-                item.Id = ((ObjectId?)itemUpdate.UpsertedId);
+
+                // This is an update.
+                var filter = new FilterDefinitionBuilder<T>().Where(x => x.Id == item.Id);
+
+                var updateoptions = new ReplaceOptions()
+                {
+                    IsUpsert = true
+                };
+
+                var collection = GetCollection<T>(item.GetType());
+
+                var itemUpdate = await collection.ReplaceOneAsync(filter, item, updateoptions);
+                
             }
 
             return item;

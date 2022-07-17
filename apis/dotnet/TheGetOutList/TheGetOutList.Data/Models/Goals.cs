@@ -9,9 +9,7 @@ namespace TheGetOutList.Data.Models
     [BsonCollectionAttribute("goals")]
     public class Goal
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public Guid Id { get; set; }
+        public ObjectId Id { get; set; }
         public Guid UserId { get; set; }
         public Guid? DreamId { get; set; }
         public string Title { get; set; }
